@@ -213,8 +213,8 @@ document.addEventListener("readystatechange",function(){
 				lis[i].classList.remove('play_current');
 			};
 			lis[currentsongindex].classList.add('play_current');
-			document.querySelector('.music_name').innerHTML = yinyueku[currentsongindex].name;
-			document.querySelector('.singer_name').innerHTML = yinyueku[currentsongindex].geshou;
+			document.querySelector('.music_name span').innerHTML = yinyueku[currentsongindex].name;
+			document.querySelector('.singer_name span').innerHTML = yinyueku[currentsongindex].geshou;
 			document.querySelector('.play_date').innerHTML = yinyueku[currentsongindex].duration;
 			document.querySelector('.music_op').style.display = 'block';
 		}
