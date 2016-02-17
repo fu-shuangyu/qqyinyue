@@ -298,24 +298,38 @@ document.addEventListener("readystatechange",function(){
 		
 
 		//展开播放列表
+		var flag = true;
+		var flag1 = true;
 		spansongnum1.onclick = function(){
-			divplayframe.style.display = 'block';
-		}
-		btnfold.onclick = function(){
-			var a = document.querySelector(".m_player_folded");
-			if(a==undefined){
-				divplayer.classList.add(".m_player_folded");
-				divplayer.style.left = '-540px';
+			if(flag){
+				divplayframe.style.cssText = 'transition:opacity 0.6s ease 0s;opacity:1;z-index:4';
+				flag = false;
 			}else{
-				divplayer.style.left = '0px';
-				divplayer.classList.remove(".m_player_folded");
+				divplayframe.style.cssText = 'transition:opacity 0.6s ease 0s;opacity:0;';
+				flag=true;
 			}
 		}
-
+		btnfold.onclick = function(){
+			if(flag1){
+				if(!flag){
+					divplayframe.style.cssText = 'transition:opacity 0.3s ease 0s;opacity:0;';
+					divplayer.classList.add(".m_player_folded");
+					divplayer.style.cssText = 'transition:left 0.6s ease 0.3s;left:-540px;';
+				}
+					divplayer.style.cssText = 'transition:left 0.6s ease 0s;left:-540px;';
+					flag1 = false;
+			}else{
+				divplayer.style.cssText = 'transition:left 0.6s ease 0s;left:0;';
+				divplayer.classList.remove(".m_player_folded");
+				flag1 = true;
+			}
+		}
+		divplayer.style.cssText = 'transition:left 0.6s ease 0s;left:0;';
 		//收起列表
 		btnclose.onclick = function (){
 			divplayframe.style.opacity=0;
 		}
+
 		//-----------阻止冒泡的程序代码
 		volPosition.onclick = function(ev){
 			ev.stopPropagation();
