@@ -565,14 +565,14 @@ to{opacity:.5}}
 .egg_contra_13{background-position:-100px -140px}
 .mod_focus_show{width:700px;height:280px;position:relative;overflow:hidden;margin:0 0 40px}
 .mod_focus_show .slide_prev,.mod_focus_show .slide_next{width:35px;height:70px;background:url(http://imgcache.gtimg.cn/mediastyle/musicprotal/img/mod_focus_show.png) no-repeat -999px -999px;position:absolute;opacity:.2;filter:alpha(opacity=20);z-index:12;text-indent:-99em;overflow:hidden;top:50%;margin-top:-35px}
-.mod_focus_show .slide_prev{left:0;background-position:0 0}
+.mod_focus_show .slide_prev{left:0;background-position:0 0;z-index: 9;}
 .mod_focus_show .slide_next{right:0;background-position:-40px 0}
 .mod_focus_show .slide_prev:hover,.mod_focus_show .slide_next:hover{opacity:.5;filter:alpha(opacity=50)}
 :root .mod_focus_show .slide_prev,:root .mod_focus_show .slide_next{filter:none}
 .mod_focus_show .mod_focus_pic{display:block;width:700px;height:280px}
 .mod_focus_show .mod_focus_pic li,.mod_focus_show .mod_focus_pic a,.mod_focus_show .mod_focus_pic img{display:block;width:700px;height:280px}
 .mod_focus_show .mod_focus_pic li{position:absolute;left:0;top:0}
-.focus_switch{font-size:0;position:absolute;bottom:10px;left:50%;width:738px;height:10px;margin-left:-369px;*line-height:15px;text-align:center;z-index:11;overflow:hidden;line-height:0}
+.focus_switch{font-size:0;position:absolute;bottom:10px;left:50%;width:738px;height:10px;margin-left:-369px;*line-height:15px;text-align:center;z-index:10;overflow:hidden;line-height:0}
 .focus_switch a{display:inline-block;_zoom:1;width:10px;height:10px;margin:0 4px;background-color:#fff;font-size:0;overflow:hidden;border-radius:100%;filter:alpha(opacity=40);opacity:.4}
 .focus_switch a.current{filter:alpha(opacity=100);opacity:1}
 .mod_cp{position:absolute;right:0;top:0;text-align:right;font-size:0}
